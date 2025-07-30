@@ -65,6 +65,11 @@
   color: #d32f2f;
 }
 
+/* Desktop menu toggle shouldn't show by default */
+.menu-toggle {
+  display: none;
+}
+
 /* Mobile responsive styles */
 @media (max-width: 768px) {
   .navbar {
@@ -102,9 +107,4 @@
     font-size: 1.5rem;
     cursor: pointer;
   }
-}
-
-/* Desktop menu toggle shouldn't show by default */
-.menu-toggle {
-  display: none;
 }
