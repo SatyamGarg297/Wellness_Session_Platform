@@ -22,20 +22,24 @@ A full-stack web application where users can **sign up, create wellness sessions
 
 ## Folder Structure
 
+```
 Wellness_Session_Platform-main/
-├── backend/        # Express server & API logic
-│ ├── config/       # DB config (MongoDB)
-│ ├── controllers/  # Auth and Session logic
-│ ├── middleware/   # Auth middleware
-│ ├── models/       # Mongoose schemas
-│ ├── routes/       # API routes
-│ └── server.js     # Entry point
-└── frontend/       # React + Vite frontend
-├── public/         # Static assets
-├── src/            # Components and pages
-│ ├── components/
-│ ├── pages/
-└── main.jsx        # App entry point
+├── backend/ # Express server & API logic
+│ ├── config/ # DB config (MongoDB)
+│ ├── controllers/ # Auth and Session logic
+│ ├── middleware/ # Auth middleware
+│ ├── models/ # Mongoose schemas
+│ ├── routes/ # API routes
+│ └── server.js # Entry point of backend
+│
+├── frontend/ # React + Vite frontend
+│ ├── public/ # Static assets
+│ └── src/ # Components and pages
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Page-level components
+│ └── main.jsx # App entry point
+```
+
 
 ## Getting Started
 
