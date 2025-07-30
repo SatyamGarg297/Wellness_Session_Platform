@@ -47,7 +47,7 @@ const Dashboard = () => {
                 ))}
               </div>
               <a
-                href={s.json_file_url}
+                // href={s.json_file_url}
                 className="json-link"
                 target="_blank"
                 rel="noopener noreferrer"

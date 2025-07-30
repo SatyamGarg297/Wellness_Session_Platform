@@ -20,7 +20,7 @@ const SessionCard = ({ s }) => {
         ))}
       </div>
       <div className="s-card-actions">
-        <Link to={`/edit/${s._id}`} className="edit-button">
+        <Link  to={`/editor/${s._id}`} className="edit-button">
           Edit
         </Link>
       </div>
