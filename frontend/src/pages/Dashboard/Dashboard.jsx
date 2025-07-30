@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import API from "../../services/api";
+import "../SessionCard/SessionCard.css"
 
 const Dashboard = () => {
   const [sessions, setSessions] = useState([]);
@@ -33,11 +34,14 @@ const Dashboard = () => {
       ) : (
         <div className="session-list">
           {sessions.map((s) => (
-            <div className="session-card" key={s._id}>
-              <h4 className="session-title">{s.title}</h4>
-              <div className="session-tags">
+            <div className="s-card" key={s._id}>
+             <div className="s-card-header">
+              <h3 className="s-title">{s.title}</h3>
+              <span className={`s-status ${s.status}`}>{s.status}</span>
+              </div>
+              <div className="s-tags">
                 {s.tags.map((tag) => (
-                  <span className="tag" key={tag}>
+                  <span className="s-tag" key={tag}>
                     {tag}
                   </span>
                 ))}

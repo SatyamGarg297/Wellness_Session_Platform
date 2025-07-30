@@ -1,147 +1,62 @@
-/* MySessions.css */
 .my-sessions {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .my-sessions-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.my-sessions-title {
-  font-size: 2rem;
-  color: #2c3e50;
-  margin: 0;
 }
 
 .create-new-btn {
-  background-color: #3498db;
+  background-color: #4a6fa5;
   color: white;
   border: none;
+  border-radius: 4px;
   padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: background-color 0.2s ease;
 }
 
 .create-new-btn:hover {
-  background-color: #2980b9;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(41, 128, 185, 0.2);
+  background-color: #3a5a8a;
+}
+
+.create-new-btn span {
+  font-size: 1.25rem;
+}
+
+.my-sessions-title {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
 }
 
 .session-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-.session-card {
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
-  transition: all 0.2s ease;
-  border-left: 4px solid #3498db;
-}
-
-.session-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.session-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-}
-
-.session-title {
-  font-size: 1.25rem;
-  color: #2c3e50;
-  margin: 0;
-  font-weight: 600;
-}
-
-.session-status {
-  font-size: 0.85rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-weight: 600;
-}
-
-/* Status colors */
-.status-draft {
-  background-color: #fff3e0;
-  color: #ff8f00;
-}
-
-.status-published {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-}
-
-.status-archived {
-  background-color: #f5f5f5;
-  color: #616161;
-}
-
-.session-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.tag {
-  background-color: #e3f2fd;
-  color: #1565c0;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-.session-actions {
-  display: flex;
-  gap: 1rem;
-}
-
-.edit-btn {
-  background-color: #f5f5f5;
-  color: #424242;
-  border: none;
-  padding: 0.5rem 1.25rem;
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.edit-btn:hover {
-  background-color: #e0e0e0;
-}
-
-/* Empty state */
 .empty-state {
+  color: #666;
+  font-style: italic;
+  padding: 2rem;
   text-align: center;
-  padding: 3rem;
-  color: #95a5a6;
-  border: 1px dashed #ecf0f1;
+  background-color: #f9f9f9;
   border-radius: 8px;
-  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* Responsive adjustments */
@@ -149,8 +64,12 @@
   .my-sessions {
     padding: 1rem;
   }
-
+  
   .session-list {
     grid-template-columns: 1fr;
+  }
+  
+  .my-sessions-title {
+    font-size: 1.25rem;
   }
 }
